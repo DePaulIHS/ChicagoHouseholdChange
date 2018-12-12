@@ -13,7 +13,7 @@
       html,
       body,
       #map {
-        height: 600px;
+        height: 100%;
         
       }
       
@@ -30,7 +30,7 @@
 
     </script>
 
-    <div id="map" style="height:550px">
+    <div id="map" style="width: 635px; height:550px">
     </div>
 
     <script>
@@ -6056,20 +6056,19 @@
         }
       }).addTo(map);
 
+      
+//button
+
     </script>
-	
-<!--buttons-->
-	<div style="text-align: center;">
-		<table style="width: 100%; /*padding: 10px;*/ "><tbody>
-			<tr>
-				<td><button onclick="total()">Total Households </button></td><td><button onclick="tot50k()">Households below $50K</button></td>
-				<td><button onclick="tot50k100k()">Households $50K to $100k</button></td>
-				<td><button onclick="tot100k()">Households above $100K</button></td>
-			</tr>
-		</tbody></table>
-	</div>
-	
-	<script>
+    <button onclick="total()">Total Households 
+    </button>
+    <button onclick="tot50k()">Households below $50K 
+    </button>
+    <button onclick="tot50k100k()">Households $50K to $100k 
+    </button>
+    <button onclick="tot100k()">Households above $100K 
+    </button>
+   <script>
    
       function total(){
       var totHHLayer = L.geoJson(states, {
